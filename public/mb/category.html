@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分类</title>
+    <link rel="stylesheet" href="assets/mui/css/mui.css"/>
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/category.css"/>
+</head>
+<body>
+<div class="lt_container">
+    <header class="lt_topBar">
+        <a href="javascript:history.back()" class="btn_left"><span class="mui-icon mui-icon-arrowleft"></span></a>
+        <h3>分类</h3>
+        <a href="search.html" class="btn_right"><span class="fa fa-search"></span></a>
+    </header>
+    <div class="lt_content">
+        <div class="lt_wrapper">
+            <!--<div class="mui-scroll-wrapper">-->
+                <!--<div class="mui-scroll">-->
+                    <!--这里放置真实显示的DOM内容-->
+                    <div class="lt_cateLeft">
+                        <ul>
+
+                        </ul>
+                    </div>
+                    <div class="lt_cateRight">
+                        <ul class="mui-clearfix">
+
+                        </ul>
+                    </div>
+
+                </div>
+            <!--</div>-->
+        <!--</div>-->
+
+    </div>
+    <footer class="lt_tabBar">
+        <ul>
+            <li><a href="index.html"><span class="fa fa-home"></span><p>首页</p></a></li>
+            <li class="now"><a href="category.html"><span class="fa fa-bars"></span><p>分类</p></a></li>
+            <li><a href="user/cart.html"><span class="fa fa-shopping-cart"></span><p>购物车</p></a></li>
+            <li><a href="index.html"><span class="fa fa-user"></span><p>会员中心</p></a></li>
+        </ul>
+    </footer>
+</div>
+<script type="text/template" id="firstCategory">
+    {{each rows as value i}}
+    <li data-id="{{value.id}}" class="{{i==0?'now':''}}"><a href="javascript:">{{value.categoryName}}</a></li>
+    {{/each}}
+</script>
+<script type="text/template" id="secondCategory">
+    {{if rows.length==0}}
+    <p style="padding: 10px">暂时没有分类数据</p>
+    {{/if}}
+    {{if rows.length>0}}
+        {{each rows as value i}}
+            <li><a href="product.html?productId={{value.id}}"><img src="{{value.brandLogo}}"><button onclick="javascript:window.location.href='product.html?productId={{value.id}}'">{{value.brandName}}</button></a></li>
+        {{/each}}
+    {{/if}}
+</script>
+<script src="assets/mui/js/mui.js"></script>
+<script src="assets/zepto/zepto.min.js"></script>
+<script src="assets/artTemplate/template.js"></script>
+<script src="js/common.js"></script>
+<script src="js/category.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="assets/mui/css/mui.css"/>
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div class="lt_container">
+    <header class="lt_topBar">
+        <h3>鹏宸洗化商城</h3>
+        <a href="search.html" class="btn_right"><span class="fa fa-search"></span></a>
+    </header>
+    <div class="lt_content">
+        <div class="lt_wrapper">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <div class="mui-slider">
+                        <div class="mui-slider-group mui-slider-loop">
+                            <!--支持循环，需要重复图片节点-->
+                            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/card2.png" /></a></div>
+                            <div class="mui-slider-item"><a href="#"><img src="images/timg.jpg" /></a></div>
+                            <div class="mui-slider-item"><a href="#"><img src="images/card2.png" /></a></div>
+                            <!--支持循环，需要重复图片节点-->
+                            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/timg.jpg" /></a></div>
+                        </div>
+                        <div class="mui-slider-indicator">
+                            <div class="mui-indicator mui-active"></div>
+                            <div class="mui-indicator"></div>
+                        </div>
+                    </div>
+                    <!--<input type="file" capture="camera" accept="image/*" id="filetest" name="filetest">-->
+                    <nav class="lt_nav">
+                        <a href="category.html"><img src="images/head.png" alt=""/></a>
+                        <a href="category.html"><img src="images/face.png" alt=""/></a>
+                        <a href="category.html"><img src="images/body.png" alt=""/></a>
+                        <a href="category.html"><img src="images/tooth.png" alt=""/></a>
+                        <a href="category.html"><img src="images/kitchen.png" alt=""/></a>
+                        <a href="category.html"><img src="images/nav6.png" alt=""/></a>
+                    </nav>
+                    <!--商品块-->
+                    <div class="lt_product">
+                        <!--<a class="item" href="#">-->
+                            <!--<img src="images/product.jpg">-->
+                            <!--<p>这是一双神奇的运动鞋</p>-->
+                            <!--<p><span>$45</span><del>$55</del></p>-->
+                            <!--<button class="mui-btn-blue">戳我</button>-->
+                        <!--</a>-->
+                        <!--<a class="item" href="#">-->
+                            <!--<img src="images/product.jpg">-->
+                            <!--<p>这是一双神奇的运动鞋</p>-->
+                            <!--<p><span>$45</span><del>$55</del></p>-->
+                            <!--<button class="mui-btn-blue">戳我</button>-->
+                        <!--</a>-->
+                        <!--<a class="item" href="#">-->
+                            <!--<img src="images/product.jpg">-->
+                            <!--<p>这是一双神奇的运动鞋</p>-->
+                            <!--<p><span>$45</span><del>$55</del></p>-->
+                            <!--<button class="mui-btn-blue">戳我</button>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="lt_tabBar">
+        <ul>
+            <li class="now"><a href="index.html"><span class="fa fa-home"></span><p>首页</p></a></li>
+            <li><a href="category.html"><span class="fa fa-bars"></span><p>分类</p></a></li>
+            <li><a href="user/cart.html"><span class="fa fa-shopping-cart"></span><p>购物车</p></a></li>
+            <li><a href="./user/login.html"><span class="fa fa-user"></span><p>会员中心</p></a></li>
+        </ul>
+    </footer>
+</div>
+
+<script type="text/template" id="firstList">
+    {{each rows as value i}}
+        <a class="item" href="#">
+            <img src="{{value.brandLogo}}">
+            <p>{{value.navName}}</p>
+            <p><span>$45</span><del>$55</del></p>
+            <button class="mui-btn-blue" onclick="javascript:window.location.href='product.html?productId={{value.id}}'">了解详情</button>
+        </a>
+    {{/each}}
+</script>
+<script src="assets/zepto/zepto.min.js"></script>
+<script src="assets/mui/js/mui.js"></script>
+<script src="assets/artTemplate/template.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

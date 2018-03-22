@@ -1,0 +1,74 @@
+.lt_search{
+  margin-top: 10px;
+  padding: 0 10px;
+  form{
+    position: relative;
+    .search_input{
+      background: #fff;
+      border: 1px solid #069;
+      text-align: left;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .search_btn{
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 60px;
+      height: 34px;
+      background: #069;
+      text-align: center;
+      line-height: 34px;
+      color: #fff;
+      font-size: 12px;
+      border-radius: 0 6px 6px 0;
+    }
+  }
+}
+//搜索排序
+.lt_order{
+  height: 30px;
+  line-height: 30px;
+  background: #eee;
+  padding: 0 10px;
+  a{
+    font-size: 12px;
+    color: #333;
+    float: left;
+    width: 25%;
+    text-align: center;
+    &.now{
+      color: darkorange;
+    }
+  }
+}
+//加载图标
+.loading{
+  min-height: 300px;
+  width: 100%;
+  text-align: center;
+  line-height: 300px;
+  .mui-icon{
+    color: #069;
+    animation: rotateLoading 1s linear infinite;
+  }
+}
+//图标转动动画
+@keyframes rotateLoading {
+  from{
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }to{
+     transform: rotate(360deg);
+       -webkit-transform: rotate(360deg);
+   }
+}
+@-webkit-keyframes rotateLoading {
+  from{
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }to{
+     transform: rotate(360deg);
+     -webkit-transform: rotate(360deg);
+   }
+}
